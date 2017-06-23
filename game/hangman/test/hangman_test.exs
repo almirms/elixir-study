@@ -1,6 +1,6 @@
-defmodule ListsTest do
+defmodule HangmanTest do
   use ExUnit.Case
-  doctest Lists
+  doctest Hangman
 
   test "the truth" do
     assert 1 + 1 == 2

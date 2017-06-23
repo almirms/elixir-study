@@ -10,11 +10,11 @@ use Mix.Config
 
 # You can configure for your application as:
 #
-#     config :exercicies, key: :value
+#     config :hangman, key: :value
 #
 # And access this configuration in your application as:
 #
-#     Application.get_env(:exercicies, :key)
+#     Application.get_env(:hangman, :key)
 #
 # Or configure a 3rd-party app:
 #
