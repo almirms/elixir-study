@@ -31,4 +31,5 @@ defmodule Hangman.Game do
   def tally(_game) do
     123
   end
+
 end
