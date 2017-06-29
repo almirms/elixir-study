@@ -32,4 +32,5 @@ defmodule GameTest do
       { game, _tally }  = Game.make_move(game, "x")
       assert game.game_state == :already_used
     end
+
 end
