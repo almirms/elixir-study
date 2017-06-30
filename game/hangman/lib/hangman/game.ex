@@ -68,7 +68,7 @@ defmodule Hangman.Game do
     |> Enum.map(fn letter -> reveal_letter(letter, MapSet.member?(used, letter)) end)
   end
 
-  defp reveal_letter(letter, _in_word = true), do: letter
+  defp reveal_letter(letter, _in_word = true),  do: letter
   defp reveal_letter(_letter, _not_in_word),    do: "_"
   
   defp maybe_won(true), do: :won
