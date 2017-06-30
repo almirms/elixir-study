@@ -8,7 +8,7 @@ defmodule Hangman.Game do
   )
 
   def new_game() do
-    new_game(Dictionary.random_word)
+    Dictionary.start |> Dictionary.random_word |> new_game
   end
 
   def new_game(word) do
@@ -20,7 +20,7 @@ defmodule Hangman.Game do
   end
 
   def make_move(game, guess) do
-     game = accept_move(game, guess, MapSet.member?(game.used, guess))
+     accept_move(game, guess, MapSet.member?(game.used, guess))
   end
 
   def tally(game) do
