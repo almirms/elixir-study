@@ -40,7 +40,6 @@ defmodule GameTest do
     end
 
     test "a guessed word in a won game" do
-      
       moves = [
         {"c", :good_guess}, 
         {"a", :good_guess}, 
@@ -56,7 +55,6 @@ defmodule GameTest do
         assert game.game_state == state
         game
       end)  
-      
     end
 
     test "bad guess is recognized" do
