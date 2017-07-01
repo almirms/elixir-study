@@ -25,9 +25,10 @@ defmodule Hangman.Game do
 
   def tally(game) do
     %{
-      game_state: game.game_state,
-      turns_left: game.turns_left,
-      letters:    game.letters |> reveal_guessed(game.used)
+      game_state:   game.game_state,
+      turns_left:   game.turns_left,
+      letters:      game.letters |> reveal_guessed(game.used),
+      letters_used: game.used |> MapSet.to_list() |> Enum.join(" ")
     }
   end
   

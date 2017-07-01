@@ -3,7 +3,7 @@ defmodule TextClient.Prompter do
   alias TextClient.State
   
   def accept_move(game = %State{}) do
-    input = IO.gets("chuta uma letra: ")
+    IO.gets("chuta uma letra: ")
     |> check_input(game)
   end
 
@@ -12,7 +12,7 @@ defmodule TextClient.Prompter do
     exit(:normal)
   end
 
-  defp check_input(:eof) do
+  defp check_input(:eof, _) do
     IO.puts("parece que você desistiu...")
     exit(:normal)
   end

@@ -4,7 +4,10 @@ defmodule TextClient.Summary do
       "\n", 
       "palavra:    #{Enum.join(tally.letters, " ")}",
       "\n", 
-      "chances restantes:   #{tally.turns_left}"
+      "chances restantes:   #{tally.turns_left}",
+      "\n",
+      "letras já chutadas: #{tally.letters_used}",
+      "\n"
     ]
     game  
   end

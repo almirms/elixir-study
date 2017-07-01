@@ -28,11 +28,7 @@ defmodule TextClient.Player do
     continue(game)
   end
 
-  def make_move(game) do
-    game
-  end
-
-  def continue(game) do
+  defp continue(game) do
     game
     |> Summary.display()
     |> Prompter.accept_move()
