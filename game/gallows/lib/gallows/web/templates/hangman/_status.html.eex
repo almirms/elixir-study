@@ -1,0 +1,21 @@
+<p>
+  chances: <%= @tally.turns_left %>
+</p>
+<p>
+  palavra até agora: <%= @tally.letters |> Enum.join(" ") %>
+</p>
+<p>
+  letras usadas: <%= @tally.letters_used %>
+</p>
+
+<%= if game_over?(@tally) do %>
+  <%= new_game_button(@conn) %>  
+<% else %>
+  <%= form_for(@conn, hangman_path(@conn, :make_move), [ as: :make_move, method: :put ], fn f -> %>
+    <%= text_input(f, :guess) %>
+    <%= submit("dá um chute!") %>
+    <script>
+      document.getElementById("make_move_guess").focus();
+    </script>
+  <% end) %>
+<% end %>

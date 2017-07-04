@@ -1,2 +1,2 @@
-<h1>esse é o hangman</h1>
-<%= button("novo jogo", to: hangman_path(@conn, :create_game)) %> 
+<h1>forca forca forca</h1>
+<%= new_game_button(@conn) %>
