@@ -1,0 +1,19 @@
+<%= game_state(@tally.game_state) %>
+
+
+<p>
+  chances: <%= @tally.turns_left %>
+</p>
+<p>
+  palavra até agora: <%= @tally.letters |> Enum.join(" ") %>
+</p>
+<p>
+  letras usadas: <%= @tally.letters_used %>
+</p>
+
+<%= form_for(@conn, hangman_path(@conn, :make_move), [ as: :make_move, method: :put ], fn f -> %>
+  <%= text_input(f, :guess) %>
+  <%= submit("dá um chute!") %>
+<% end) %>
+
+
