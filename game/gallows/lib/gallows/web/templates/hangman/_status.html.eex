@@ -6,7 +6,10 @@
 </p>
 
 <%= if game_over?(@tally) do %>
-  <%= new_game_button(@conn) %>  
+  <%= new_game_button(@conn) %>
+  <script>
+    document.getElementById("novo_jogo").focus();
+  </script>    
 <% else %>
   <%= form_for(@conn, hangman_path(@conn, :make_move), [ as: :make_move, method: :put ], fn f -> %>
     <%= text_input(f, :guess) %>

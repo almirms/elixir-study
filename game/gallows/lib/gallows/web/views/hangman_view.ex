@@ -16,7 +16,7 @@ defmodule Gallows.Web.HangmanView do
   end
   
   def new_game_button(conn) do
-    button("novo jogo", to: hangman_path(conn, :create_game))
+    button("novo jogo", to: hangman_path(conn, :create_game), id: "novo_jogo")
   end
 
 end
