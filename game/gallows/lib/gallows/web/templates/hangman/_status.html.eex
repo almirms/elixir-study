@@ -1,8 +1,5 @@
 <p>
-  chances: <%= @tally.turns_left %>
-</p>
-<p>
-  palavra até agora: <%= @tally.letters |> Enum.join(" ") %>
+  palavra: <%= @tally.letters |> Enum.join(" ") %>
 </p>
 <p>
   letras usadas: <%= @tally.letters_used %>
